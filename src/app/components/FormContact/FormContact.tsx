@@ -40,7 +40,7 @@ export const FormContact: FunctionComponent = () => {
   }
 
   return (
-    <form onSubmit={onSubmit} method="POST">
+    <form onSubmit={onSubmit} method="POST" data-netlify={true}>
       <fieldset>
         <legend>Contactformulier</legend>
 
