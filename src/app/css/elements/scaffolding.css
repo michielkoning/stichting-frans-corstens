@@ -1,0 +1,21 @@
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+:root {
+  color-scheme: light dark;
+}
