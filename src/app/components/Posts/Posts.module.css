@@ -1,0 +1,20 @@
+.list {
+  list-style: none outside;
+  padding-inline-start: 0;
+}
+
+.list-item {
+  display: grid;
+  margin-block-end: var(--spacing-4);
+  grid-template-columns: 1fr 4fr;
+  gap: var(--spacing-8);
+}
+
+.image {
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block-start: var(--spacing-2);
+}

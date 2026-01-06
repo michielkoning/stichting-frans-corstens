@@ -2,6 +2,7 @@ import { FunctionComponent, PropsWithChildren } from "react";
 import { ContentType } from "./ContentType";
 import { CenterWrapper } from "./../CenterWrapper/CenterWrapper";
 import { HeroImage } from "./../HeroImage/HeroImage";
+import styles from "./Content.module.css";
 
 export const Content: FunctionComponent<PropsWithChildren<ContentType>> = (
   props
@@ -12,7 +13,10 @@ export const Content: FunctionComponent<PropsWithChildren<ContentType>> = (
       <CenterWrapper>
         <h1>{props.title}</h1>
         {props.content && (
-          <div dangerouslySetInnerHTML={{ __html: props.content }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: props.content }}
+            className={styles.content}
+          />
         )}
         {props.children}
       </CenterWrapper>

@@ -1,0 +1,10 @@
+:root {
+  --font-size-base: clamp(18px, 2.75vw, 20px);
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --line-height: 1.6;
+  --line-height-heading: 1.2;
+  --font-family-base: var(--font-family-body), Arial, Helvetica, sans-serif;
+  --font-family-heading: var(--font-family-base);
+}

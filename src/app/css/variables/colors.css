@@ -1,4 +1,21 @@
 :root {
-  --color-background: light-dark(#ffffff, #0a0a0a);
-  --color-text: light-dark(171717, #ededed);
+  --color-white: #ececec;
+  --color-green: #9fd3c7;
+  --color-blue: #385170;
+  --color-black: #142d4c;
+
+  --color-background: light-dark(var(--color-white), var(--color-black));
+  --color-text: light-dark(var(--color-black), var(--color-white));
+
+  --color-primary-light: color-mix(
+    in oklab,
+    var(--color-primary) 50%,
+    var(--color-white)
+  );
+  --color-primary: light-dark(#171717, var(--color-blue));
+  --color-primary-dark: color-mix(
+    in oklab,
+    var(--color-primary) 50%,
+    var(--color-black)
+  );
 }

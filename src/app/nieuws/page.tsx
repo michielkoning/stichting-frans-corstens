@@ -1,10 +1,10 @@
-import { News } from "app/components/News/News";
+import { Posts } from "app/components/Posts/Posts";
 import { Content } from "./../components/Content/Content";
 
-export default function Home() {
+export default function PostsPage() {
   return (
     <Content title="Nieuws">
-      <News />
+      <Posts />
     </Content>
   );
 }

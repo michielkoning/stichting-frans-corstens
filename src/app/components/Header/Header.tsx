@@ -8,12 +8,20 @@ export const Header: FunctionComponent = () => (
     <CenterWrapper>
       <nav>
         <ul className={styles.list}>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/nieuws">Nieuws</Link></li>
-          <li><Link href="/de-stichting">De stichting</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/nieuws">Nieuws</Link>
+          </li>
+          <li>
+            <Link href="/de-stichting">De stichting</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
       </nav>
     </CenterWrapper>
   </header>
-)
+);

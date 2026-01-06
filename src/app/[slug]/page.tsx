@@ -1,4 +1,4 @@
-import { getPage } from "./utils/getPage";
+import { fetchPage } from "./../../utils/lib/Page/fetchPage";
 import type { Metadata } from "next";
 import { Content } from "./../components/Content/Content";
 
@@ -9,7 +9,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const entry = await getPage(slug);
+  const entry = await fetchPage(slug);
 
   return {
     title: entry.title,
@@ -24,7 +24,7 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
-  const entry = await getPage(slug);
+  const entry = await fetchPage(slug);
 
   return (
     <Content title={entry.title} content={entry.content} image={entry.image} />

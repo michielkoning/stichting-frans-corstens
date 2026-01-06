@@ -1,10 +1,8 @@
-import { notFound } from "next/navigation";
-import { FunctionComponent } from "react";
-import fetchData from "utils/fetchData";
-import getUrl from "utils/getUrl";
 import z from "zod";
-import { News } from "app/components/News/News";
 import { Content } from "./../../components/Content/Content";
+import { Metadata } from "next";
+import { fetchPost } from "utils/lib/Post/fetchPost";
+import { Posts } from "app/components/Posts/Posts";
 
 const schema = z.array(
   z.object({
@@ -18,28 +16,34 @@ const schema = z.array(
   })
 );
 
-export default async function NewsItemPage({
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  const entry = await fetchPost(slug);
+
+  return {
+    title: entry.title,
+    description: entry.description,
+  };
+}
+
+export default async function Post({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
 
-  const url = getUrl({
-    type: "posts",
-    fields: ["title", "content"],
-    slug,
-  });
-
-  const parsed = await fetchData(url, schema);
-
-  if (!parsed.length) {
-    notFound();
-  }
-
-  const entry = parsed[0];
+  const entry = await fetchPost(slug);
 
   return (
-    <Content title={entry.title.rendered} content={entry.content.rendered} />
+    <Content title={entry.title} content={entry.content} image={entry.image}>
+      <h2>Overig nieuws</h2>
+      <Posts excludeId={entry.id} />
+    </Content>
   );
 }

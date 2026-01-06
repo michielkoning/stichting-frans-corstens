@@ -1,4 +1,4 @@
 :root {
   --wrapper-width: 1024px;
-  --gutter: 1rem;
+  --gutter: var(--spacing-4);
 }

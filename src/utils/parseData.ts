@@ -1,12 +1,14 @@
-import { notFound } from 'next/navigation'
-import type { z } from 'zod'
+import { notFound } from "next/navigation";
+import { z } from "zod";
+import { parse } from "zod/v4-mini";
 
 export const parseData = <T extends z.ZodTypeAny>(data: unknown, schema: T) => {
-  const parsed = schema.safeParse(data)
+  const parsed = schema.safeParse(data);
 
   if (!parsed.success) {
-    return notFound()
+    console.log(z.prettifyError(parsed.error));
+    return notFound();
   }
 
-  return parsed.data as z.infer<T>
-}
+  return parsed.data as z.infer<T>;
+};

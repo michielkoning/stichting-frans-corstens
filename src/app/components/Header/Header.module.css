@@ -1,12 +1,12 @@
 .header {
   display: block;
-  padding-block: 1em;
+  padding-block: var(--spacing-4);
 }
 
 .list {
   list-style: none outside;
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--spacing-4);
   padding-inline-start: 0;
 }

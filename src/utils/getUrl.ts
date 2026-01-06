@@ -6,16 +6,18 @@ const getUrl = ({
   id,
   slug,
   image,
+  excludeId,
 }: {
   fields: string[];
   type: "posts" | "pages";
   id?: string;
   slug?: string;
   image?: boolean;
+  excludeId?: number;
 }) => {
   // const apiUrl = process.env.API_URL;
-  const apiUrl = 'http://77.248.18.233:8080/wp-json/wp/v2/'
-  
+  const apiUrl = "http://77.248.18.233:8080/wp-json/wp/v2/";
+
   let baseUrl = `${apiUrl}${type}/`;
   if (id) {
     baseUrl = `${baseUrl}${id}`;
@@ -33,6 +35,10 @@ const getUrl = ({
   const allFields = ["id", ...fields];
   url.searchParams.set("status", "publish");
   url.searchParams.set("_fields", allFields.join(","));
+
+  if (excludeId) {
+    url.searchParams.set("exclude", excludeId.toString());
+  }
 
   if (slug) {
     url.searchParams.set("slug", slug);

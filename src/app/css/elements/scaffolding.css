@@ -2,6 +2,11 @@
   color-scheme: light dark;
 }
 
+::selection {
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
 * {
   &,
   &::after,
@@ -17,5 +22,9 @@ body {
 }
 
 p {
-  margin: 0 0 1em;
+  margin: 0 0 var(--spacing-4);
+}
+
+ul {
+  margin: 0 0 var(--spacing-4);
 }
