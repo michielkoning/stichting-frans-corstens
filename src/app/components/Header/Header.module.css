@@ -1,0 +1,12 @@
+.header {
+  display: block;
+  padding-block: 1em;
+}
+
+.list {
+  list-style: none outside;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline-start: 0;
+}
