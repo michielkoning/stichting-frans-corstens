@@ -16,3 +16,7 @@ button {
 a {
   color: currentcolor;
 }
+
+.more-link {
+  display: none;
+}
