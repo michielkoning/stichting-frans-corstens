@@ -1,8 +1,8 @@
-import { PageSchema } from "./PageSchema";
 import { getImage } from "../Images/getImage";
 import { z } from "zod";
+import { PostSchema } from "./PostSchema";
 
-export const getPost = (data: z.infer<typeof PageSchema>) => {
+export const getPost = (data: z.infer<typeof PostSchema>) => {
   const entry = data[0];
 
   return {
