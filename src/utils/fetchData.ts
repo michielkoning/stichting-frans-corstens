@@ -1,4 +1,4 @@
-import z from "zod";
+import { z } from "zod";
 import { parseData } from "./parseData";
 
 const fetchData = async <T extends z.ZodTypeAny>(url: string, schema: T) => {

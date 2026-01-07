@@ -1,20 +1,38 @@
 .list {
   list-style: none outside;
   padding-inline-start: 0;
+  container-name: achive-list;
+  container-type: inline-size;
 }
 
 .list-item {
   display: grid;
   margin-block-end: var(--spacing-4);
-  grid-template-columns: 1fr 4fr;
-  gap: var(--spacing-8);
+  gap: var(--spacing-4);
+
+  @container achive-list (width > 24em) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  @container achive-list (width > 32em) {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @container achive-list (width > 40em) {
+    gap: var(--spacing-8);
+    grid-template-columns: 1fr 4fr;
+  }
 }
 
 .image {
   object-fit: cover;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 5 / 2;
   display: block;
   width: 100%;
   height: auto;
   margin-block-start: var(--spacing-2);
+
+  @container achive-list (width > 24em) {
+    aspect-ratio: 3 / 2;
+  }
 }

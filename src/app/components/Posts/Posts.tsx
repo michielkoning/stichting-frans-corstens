@@ -23,7 +23,8 @@ export const Posts: FunctionComponent<{ excludeId?: number }> = async ({
           width={item.image.width}
           height={item.image.height}
           src={item.image.src}
-          sizes="100vw"
+          sizes="25vw"
+          loading="lazy"
           className={styles.image}
         />
       )}

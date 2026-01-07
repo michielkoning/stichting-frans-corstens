@@ -1,20 +1,7 @@
-import z from "zod";
 import { Content } from "./../../components/Content/Content";
 import { Metadata } from "next";
 import { fetchPost } from "utils/lib/Post/fetchPost";
 import { Posts } from "app/components/Posts/Posts";
-
-const schema = z.array(
-  z.object({
-    id: z.number(),
-    content: z.object({
-      rendered: z.string(),
-    }),
-    title: z.object({
-      rendered: z.string(),
-    }),
-  })
-);
 
 export async function generateMetadata({
   params,
