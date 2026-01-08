@@ -2,10 +2,16 @@
   --color-white: #ececec;
   --color-green: #9fd3c7;
   --color-blue: #385170;
-  --color-black: #142d4c;
+  --color-blue-dark: #142d4c;
+  --color-black: #222;
 
-  --color-background: light-dark(var(--color-white), var(--color-black));
-  --color-text: light-dark(var(--color-black), var(--color-white));
+  --color-background: light-dark(var(--color-white), var(--color-blue-dark));
+  --color-text: light-dark(var(--color-blue-dark), var(--color-white));
+
+  --color-background-alternative: light-dark(
+    var(--color-white),
+    var(--color-black)
+  );
 
   --color-primary-light: color-mix(
     in oklab,
@@ -16,6 +22,6 @@
   --color-primary-dark: color-mix(
     in oklab,
     var(--color-primary) 50%,
-    var(--color-black)
+    var(--color-blue-dark)
   );
 }

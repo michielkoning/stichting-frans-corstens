@@ -1,8 +1,10 @@
 import { Ubuntu } from "next/font/google";
 import "./css/globals.css";
+import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { CenterWrapper } from "./components/CenterWrapper/CenterWrapper";
 import { Metadata, Viewport } from "next";
+import styles from "./layout.module.css";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -25,9 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" dir="ltr" className={`${ubuntu.variable}`}>
-      <body>
+      <body className={styles.body}>
         <Header />
-        <main>{children}</main>
+        <main className={styles.main}>{children}</main>
+        <Footer />
       </body>
     </html>
   );

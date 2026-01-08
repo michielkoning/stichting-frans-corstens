@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CenterWrapper } from "../CenterWrapper/CenterWrapper";
-import styles from "./Header.module.css";
+import styles from "./Footer.module.css";
 import { FunctionComponent } from "react";
 import { z } from "zod";
 import { parseData } from "utils/parseData";
@@ -16,9 +16,9 @@ const schema = z.array(
   })
 );
 
-export const Header: FunctionComponent = async () => {
+export const Footer: FunctionComponent = async () => {
   const response = await fetch(
-    "http://77.248.18.233:8080/wp-json/stichting-frans-corstens/menu/header"
+    "http://77.248.18.233:8080/wp-json/stichting-frans-corstens/menu/footer"
   );
   const data = await response.json();
   const parsed = schema.safeParse(data);
@@ -29,34 +29,20 @@ export const Header: FunctionComponent = async () => {
   const mainItems = parsed.data.filter((item) => item.menu_item_parent === 0);
 
   const items = mainItems.map((mainItem) => {
-    const subItems = parsed.data.filter(
-      (item) => item.menu_item_parent === mainItem.ID
-    );
     return (
-      <li key={mainItem.ID} className={styles["list-item"]}>
+      <li key={mainItem.ID}>
         <Link href={mainItem.url}>{mainItem.title}</Link>
-        {subItems.length > 0 && (
-          <ul className={styles["sub-list"]}>
-            {subItems.map((subItem) => (
-              <li key={subItem.ID}>
-                <Link href={subItem.url} className={styles["sub-list-link"]}>
-                  {subItem.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
       </li>
     );
   });
 
   return (
-    <header className={styles.header}>
+    <footer className={styles.footer}>
       <CenterWrapper>
         <nav>
           <ul className={styles.list}>{items}</ul>
         </nav>
       </CenterWrapper>
-    </header>
+    </footer>
   );
 };

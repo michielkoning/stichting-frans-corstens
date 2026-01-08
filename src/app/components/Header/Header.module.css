@@ -1,6 +1,7 @@
 .header {
   display: block;
-  padding-block: var(--spacing-4);
+  background: var(--color-background-alternative);
+  color: var(--color-text-alternative);
 }
 
 .list {
@@ -9,4 +10,30 @@
   justify-content: space-between;
   gap: var(--spacing-4);
   padding-inline-start: 0;
+  margin-block-end: 0;
+}
+
+.list-item {
+  padding-block: var(--spacing-4);
+  position: relative;
+
+  &:hover .sub-list {
+    display: block;
+  }
+}
+
+.sub-list {
+  padding: var(--spacing-2) 0;
+  background: var(--color-background-alternative);
+  color: var(--color-text-alternative);
+  white-space: nowrap;
+  position: absolute;
+  inset: 100% auto auto 0;
+  list-style: none outside;
+  display: none;
+}
+
+.sub-list-link {
+  display: block;
+  padding: var(--spacing-1) var(--spacing-4);
 }
