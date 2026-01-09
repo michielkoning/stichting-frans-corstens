@@ -1,13 +1,11 @@
 import { z } from "zod";
 import { ImageSchema } from "../Images/imageSchema";
 
-export const PageSchema = z.array(
+export const PagesSchema = z.array(
   z.object({
     id: z.number(),
+    slug: z.string().transform((val) => `/${val}`),
     title: z.object({
-      rendered: z.string(),
-    }),
-    content: z.object({
       rendered: z.string(),
     }),
     excerpt: z.object({
@@ -16,6 +14,5 @@ export const PageSchema = z.array(
     _embedded: z.object({
       "wp:featuredmedia": z.array(ImageSchema).default([]),
     }),
-    parent: z.number(),
   })
 );

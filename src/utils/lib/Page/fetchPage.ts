@@ -8,7 +8,7 @@ import { getPage } from "./getPage";
 export const fetchPage = cache(async (slug: string) => {
   const url = getUrl({
     type: "pages",
-    fields: ["title", "content", "excerpt"],
+    fields: ["title", "content", "excerpt", "parent"],
     image: true,
     slug,
   });

@@ -11,5 +11,6 @@ export const getPage = (data: z.infer<typeof PageSchema>) => {
     content: entry.content.rendered,
     description: entry.excerpt.rendered,
     image: getImage(entry._embedded["wp:featuredmedia"]),
+    parentId: entry.parent,
   };
 };

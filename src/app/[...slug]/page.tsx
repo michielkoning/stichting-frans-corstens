@@ -1,6 +1,7 @@
 import { fetchPage } from "./../../utils/lib/Page/fetchPage";
 import type { Metadata } from "next";
 import { Content } from "./../components/Content/Content";
+import { RelatedPages } from "./../components/RelatedPages/RelatedPages";
 
 export async function generateMetadata({
   params,
@@ -26,7 +27,11 @@ export default async function Page({
 
   const entry = await fetchPage(slug);
 
+  const parentId = entry.parentId > 0 ? entry.parentId : entry.id;
+
   return (
-    <Content title={entry.title} content={entry.content} image={entry.image} />
+    <Content {...entry}>
+      <RelatedPages parentId={parentId} id={entry.id} />
+    </Content>
   );
 }

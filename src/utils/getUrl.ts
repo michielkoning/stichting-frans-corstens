@@ -7,6 +7,7 @@ const getUrl = ({
   slug,
   image,
   excludeId,
+  parentId,
 }: {
   fields: string[];
   type: "posts" | "pages";
@@ -14,6 +15,7 @@ const getUrl = ({
   slug?: string;
   image?: boolean;
   excludeId?: number;
+  parentId?: number;
 }) => {
   // const apiUrl = process.env.API_URL;
   const apiUrl = "http://77.248.18.233:8080/wp-json/wp/v2/";
@@ -38,6 +40,10 @@ const getUrl = ({
 
   if (excludeId) {
     url.searchParams.set("exclude", excludeId.toString());
+  }
+
+  if (parentId) {
+    url.searchParams.set("parent", parentId.toString());
   }
 
   if (slug) {

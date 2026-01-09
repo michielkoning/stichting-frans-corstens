@@ -1,0 +1,36 @@
+import Link from "next/link";
+import { FunctionComponent } from "react";
+import Image from "next/image";
+import styles from "./ArchiveList.module.css";
+import { ArchiveListType } from "./ArchiveListType";
+
+export const ArchiveList: FunctionComponent<ArchiveListType> = ({
+  items,
+  variant = "list",
+}) => {
+  const list = items.map((item) => (
+    <li key={item.id} className={styles["list-item"]}>
+      <div className={styles.wrapper}>
+        {item.image && (
+          <Image
+            alt={item.image.alt}
+            width={item.image.width}
+            height={item.image.height}
+            src={item.image.src}
+            sizes="25vw"
+            loading="lazy"
+            className={styles.image}
+          />
+        )}
+        <div>
+          <h2>
+            <Link href={item.slug}>{item.title}</Link>
+          </h2>
+          <div dangerouslySetInnerHTML={{ __html: item.description }} />
+        </div>
+      </div>
+    </li>
+  ));
+
+  return <ul className={[styles.list, styles[variant]].join(" ")}>{list}</ul>;
+};
