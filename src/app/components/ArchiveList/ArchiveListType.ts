@@ -7,7 +7,7 @@ export type ArchiveListType = {
     id: number;
     title: string;
     slug: string;
-    description?: string;
+    description: string;
     image?: ImageType;
   }[];
 };
