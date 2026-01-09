@@ -1,6 +1,7 @@
 import { ImageType } from "../HeroImage/ImageType";
 
 export type ArchiveListType = {
+  title: string;
   variant?: "highlights" | "list";
   items: {
     id: number;

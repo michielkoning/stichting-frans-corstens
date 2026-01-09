@@ -13,5 +13,7 @@ export const Posts: FunctionComponent<{ excludeId?: number }> = async ({
     return <p>Geen bertichten gevonden</p>;
   }
 
-  return <ArchiveList items={data} />;
+  const title = excludeId ? "Overig nieuws" : "Laatste nieuws";
+
+  return <ArchiveList items={data} title={title} />;
 };

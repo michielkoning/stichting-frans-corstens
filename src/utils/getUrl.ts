@@ -10,7 +10,7 @@ const getUrl = ({
   parentId,
 }: {
   fields: string[];
-  type: "posts" | "pages";
+  type: "posts" | "pages" | "projects";
   id?: string;
   slug?: string;
   image?: boolean;

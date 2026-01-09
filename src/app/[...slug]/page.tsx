@@ -2,6 +2,9 @@ import { fetchPage } from "./../../utils/lib/Page/fetchPage";
 import type { Metadata } from "next";
 import { Content } from "./../components/Content/Content";
 import { RelatedPages } from "./../components/RelatedPages/RelatedPages";
+import { Projects } from "./../components/Projects/Projects";
+import { Posts } from "./../components/Posts/Posts";
+import { FormContact } from "./../components/FormContact/FormContact";
 
 export async function generateMetadata({
   params,
@@ -29,9 +32,20 @@ export default async function Page({
 
   const parentId = entry.parentId > 0 ? entry.parentId : entry.id;
 
+  let pageType: "page" | "page-contact" | "page-posts" | "page-projects" =
+    "page";
+  if (slug.includes("nieuws")) pageType = "page-posts";
+  if (slug.includes("contact")) pageType = "page-contact";
+  if (slug.includes("projecten")) pageType = "page-projects";
+
   return (
     <Content {...entry}>
-      <RelatedPages parentId={parentId} id={entry.id} />
+      <RelatedPages parentId={parentId} id={entry.id} title={entry.title} />
+      {pageType === "page-posts" && <Posts />}
+      {pageType === "page-contact" && <FormContact />}
+      <Projects
+        variant={pageType === "page-projects" ? "list" : "highlights"}
+      />
     </Content>
   );
 }

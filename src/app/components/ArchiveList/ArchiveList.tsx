@@ -5,6 +5,7 @@ import styles from "./ArchiveList.module.css";
 import { ArchiveListType } from "./ArchiveListType";
 
 export const ArchiveList: FunctionComponent<ArchiveListType> = ({
+  title,
   items,
   variant = "list",
 }) => {
@@ -32,5 +33,10 @@ export const ArchiveList: FunctionComponent<ArchiveListType> = ({
     </li>
   ));
 
-  return <ul className={[styles.list, styles[variant]].join(" ")}>{list}</ul>;
+  return (
+    <>
+      <h2>{title}</h2>
+      <ul className={[styles.list, styles[variant]].join(" ")}>{list}</ul>
+    </>
+  );
 };

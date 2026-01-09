@@ -5,7 +5,8 @@ import { ArchiveList } from "../ArchiveList/ArchiveList";
 export const RelatedPages: FunctionComponent<{
   parentId: number;
   id: number;
-}> = async ({ parentId, id }) => {
+  title: string;
+}> = async ({ parentId, id, title }) => {
   const data = await fetchPages({
     parentId,
     excludeId: id,
@@ -14,5 +15,5 @@ export const RelatedPages: FunctionComponent<{
   if (!data.length) {
     return;
   }
-  return <ArchiveList items={data} variant="highlights" />;
+  return <ArchiveList items={data} variant="highlights" title={title} />;
 };

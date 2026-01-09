@@ -11,7 +11,9 @@ const schema = z.array(
     title: z.string(),
     url: z
       .string()
-      .transform((val) => val.replace("http://77.248.18.233:8080", "")),
+      .transform((val) =>
+        val.replace("http://77.248.18.233:8080", "").replace("/home/", "/")
+      ),
     menu_item_parent: z.string().transform((val) => Number(val)),
   })
 );

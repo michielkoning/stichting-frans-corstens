@@ -1,7 +1,7 @@
 import { Content } from "./../../components/Content/Content";
 import { Metadata } from "next";
-import { fetchPost } from "utils/lib/Post/fetchPost";
-import { Posts } from "app/components/Posts/Posts";
+import { Projects } from "app/components/Projects/Projects";
+import { fetchProject } from "utils/lib/Project/fetchProject";
 
 export async function generateMetadata({
   params,
@@ -10,7 +10,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const entry = await fetchPost(slug);
+  const entry = await fetchProject(slug);
 
   return {
     title: entry.title,
@@ -25,7 +25,7 @@ export default async function Post({
 }) {
   const { slug } = await params;
 
-  const entry = await fetchPost(slug);
+  const entry = await fetchProject(slug);
 
   return (
     <Content
@@ -34,7 +34,7 @@ export default async function Post({
       image={entry.image}
       id={entry.id}
     >
-      <Posts excludeId={entry.id} />
+      <Projects excludeId={entry.id} />
     </Content>
   );
 }

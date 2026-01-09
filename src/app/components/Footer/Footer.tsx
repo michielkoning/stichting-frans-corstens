@@ -4,6 +4,8 @@ import styles from "./Footer.module.css";
 import { FunctionComponent } from "react";
 import { z } from "zod";
 import { parseData } from "utils/parseData";
+import { fetchPosts } from "utils/lib/Posts/fetchPosts";
+import { fetchProjects } from "utils/lib/Projects/fetchProjects";
 
 const schema = z.array(
   z.object({
@@ -28,9 +30,12 @@ export const Footer: FunctionComponent = async () => {
 
   const mainItems = parsed.data.filter((item) => item.menu_item_parent === 0);
 
+  const posts = await fetchPosts();
+  const projects = await fetchProjects();
+
   const items = mainItems.map((mainItem) => {
     return (
-      <li key={mainItem.ID}>
+      <li className={styles["list-item"]} key={mainItem.ID}>
         <Link href={mainItem.url}>{mainItem.title}</Link>
       </li>
     );
@@ -39,8 +44,35 @@ export const Footer: FunctionComponent = async () => {
   return (
     <footer className={styles.footer}>
       <CenterWrapper>
-        <nav>
-          <ul className={styles.list}>{items}</ul>
+        <nav className={styles.nav}>
+          <div>
+            <h2>Laatste nieuws</h2>
+            <ul className={styles.list}>
+              {posts.map((item) => {
+                return (
+                  <li className={styles["list-item"]} key={item.id}>
+                    <Link href={item.slug}>{item.title}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div>
+            <h2>Laatste projecten</h2>
+            <ul className={styles.list}>
+              {projects.map((item) => {
+                return (
+                  <li className={styles["list-item"]} key={item.id}>
+                    <Link href={item.slug}>{item.title}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div>
+            <h2>Uitgelichte pagina's</h2>
+            <ul className={styles.list}>{items}</ul>
+          </div>
         </nav>
       </CenterWrapper>
     </footer>
