@@ -9,9 +9,10 @@
   --color-text: light-dark(var(--color-blue-dark), var(--color-white));
 
   --color-background-alternative: light-dark(
-    var(--color-white),
+    var(--color-black),
     var(--color-black)
   );
+  --color-text-alternative: light-dark(var(--color-white), var(--color-white));
 
   --color-primary-light: color-mix(
     in oklab,
