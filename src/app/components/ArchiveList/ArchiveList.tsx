@@ -11,7 +11,7 @@ export const ArchiveList: FunctionComponent<ArchiveListType> = ({
 }) => {
   const list = items.map((item) => (
     <li key={item.id} className={styles["list-item"]}>
-      <div className={styles.wrapper}>
+      <div className={styles["list-item-wrapper"]}>
         {item.image && (
           <Image
             alt={item.image.alt}
@@ -24,9 +24,9 @@ export const ArchiveList: FunctionComponent<ArchiveListType> = ({
           />
         )}
         <div>
-          <h2>
+          <h3>
             <Link href={item.slug}>{item.title}</Link>
-          </h2>
+          </h3>
           <div dangerouslySetInnerHTML={{ __html: item.description }} />
         </div>
       </div>
@@ -34,9 +34,9 @@ export const ArchiveList: FunctionComponent<ArchiveListType> = ({
   ));
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <h2>{title}</h2>
       <ul className={[styles.list, styles[variant]].join(" ")}>{list}</ul>
-    </>
+    </div>
   );
 };

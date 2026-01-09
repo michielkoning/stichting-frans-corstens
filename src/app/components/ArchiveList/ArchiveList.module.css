@@ -15,8 +15,18 @@
 }
 
 .wrapper {
+  &:has(.highlights) {
+    padding-block: var(--spacing-12);
+  }
+}
+
+.list-item-wrapper {
   display: grid;
   gap: var(--spacing-4);
+
+  &:has(.highlights) {
+    padding-block: var(--spacing-8);
+  }
 
   @container achive-list (width > 32em) {
     gap: var(--spacing-8);
