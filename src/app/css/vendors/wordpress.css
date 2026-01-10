@@ -1,0 +1,21 @@
+.wp-block-image {
+  margin: var(--spacing-12) calc(var(--gutter) * -1);
+
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.wp-block-gallery {
+  margin: var(--spacing-12) 0;
+
+  display: grid;
+
+  .wp-block-image {
+    margin: 0;
+  }
+  gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}

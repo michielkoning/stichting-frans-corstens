@@ -28,3 +28,8 @@ p {
 ul {
   margin: 0 0 var(--spacing-4);
 }
+
+figure {
+  display: block;
+  margin: 0;
+}

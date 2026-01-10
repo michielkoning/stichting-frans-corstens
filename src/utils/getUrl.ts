@@ -36,6 +36,7 @@ const getUrl = ({
 
   const allFields = ["id", ...fields];
   url.searchParams.set("status", "publish");
+  url.searchParams.set("context", "edit");
   url.searchParams.set("_fields", allFields.join(","));
 
   if (excludeId) {
