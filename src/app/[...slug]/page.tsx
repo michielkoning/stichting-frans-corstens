@@ -13,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const entry = await fetchPage(slug);
+  const entry = await fetchPage({ slug });
 
   return {
     title: entry.title,
@@ -28,7 +28,7 @@ export default async function Page({
 }) {
   const { slug } = await params;
 
-  const entry = await fetchPage(slug);
+  const entry = await fetchPage({ slug });
 
   const parentId = entry.parentId > 0 ? entry.parentId : entry.id;
 

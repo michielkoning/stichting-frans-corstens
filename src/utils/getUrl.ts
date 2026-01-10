@@ -1,5 +1,3 @@
-// import { console } from "inspector/promises";
-
 const getUrl = ({
   fields,
   type,
@@ -11,7 +9,7 @@ const getUrl = ({
 }: {
   fields: string[];
   type: "posts" | "pages" | "projects";
-  id?: string;
+  id?: number;
   slug?: string;
   image?: boolean;
   excludeId?: number;
@@ -20,10 +18,7 @@ const getUrl = ({
   // const apiUrl = process.env.API_URL;
   const apiUrl = "http://77.248.18.233:8080/wp-json/wp/v2/";
 
-  let baseUrl = `${apiUrl}${type}/`;
-  if (id) {
-    baseUrl = `${baseUrl}${id}`;
-  }
+  const baseUrl = `${apiUrl}${type}/`;
 
   const url = new URL(baseUrl);
 
@@ -41,6 +36,10 @@ const getUrl = ({
 
   if (excludeId) {
     url.searchParams.set("exclude", excludeId.toString());
+  }
+
+  if (id) {
+    url.searchParams.set("include", id.toString());
   }
 
   if (parentId) {

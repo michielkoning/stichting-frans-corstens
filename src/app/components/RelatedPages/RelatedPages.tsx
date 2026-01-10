@@ -12,8 +12,14 @@ export const RelatedPages: FunctionComponent<{
     excludeId: id,
   });
 
-  if (!data.length) {
+  if (!data.pages.length) {
     return;
   }
-  return <ArchiveList items={data} variant="highlights" title={title} />;
+  return (
+    <ArchiveList
+      items={data.pages}
+      variant="highlights"
+      title={data.parent.title}
+    />
+  );
 };

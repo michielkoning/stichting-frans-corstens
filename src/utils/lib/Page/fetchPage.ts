@@ -5,19 +5,22 @@ import { cache } from "react";
 import { PageSchema } from "./PageSchema";
 import { getPage } from "./getPage";
 
-export const fetchPage = cache(async (slug: string) => {
-  const url = getUrl({
-    type: "pages",
-    fields: ["title", "content", "excerpt", "parent"],
-    image: true,
-    slug,
-  });
+export const fetchPage = cache(
+  async ({ slug, id }: { slug?: string; id?: number }) => {
+    const url = getUrl({
+      type: "pages",
+      fields: ["title", "content", "excerpt", "parent"],
+      image: true,
+      slug,
+      id,
+    });
 
-  const parsed = await fetchData(url, PageSchema);
+    const parsed = await fetchData(url, PageSchema);
 
-  if (!parsed.length) {
-    notFound();
+    if (!parsed.length) {
+      notFound();
+    }
+
+    return getPage(parsed);
   }
-
-  return getPage(parsed);
-});
+);
