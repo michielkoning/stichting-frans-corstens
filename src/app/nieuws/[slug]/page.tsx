@@ -1,7 +1,16 @@
 import { Content } from "./../../components/Content/Content";
 import { Metadata } from "next";
 import { fetchPost } from "utils/lib/Post/fetchPost";
+import { fetchPosts } from "utils/lib/Posts/fetchPosts";
 import { Posts } from "app/components/Posts/Posts";
+
+export async function generateStaticParams() {
+  const entries = await fetchPosts({});
+
+  return entries.map((page) => ({
+    slug: page.slug.replace("/nieuws/", ""),
+  }));
+}
 
 export async function generateMetadata({
   params,
