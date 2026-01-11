@@ -6,7 +6,13 @@ import { getPages } from "./getPages";
 import { fetchPage } from "../Page/fetchPage";
 
 export const fetchPages = cache(
-  async ({ parentId, excludeId }: { parentId: number; excludeId: number }) => {
+  async ({
+    parentId,
+    excludeId,
+  }: {
+    parentId?: number;
+    excludeId?: number;
+  }) => {
     const url = getUrl({
       type: "pages",
       fields: ["title", "excerpt", "slug"],
