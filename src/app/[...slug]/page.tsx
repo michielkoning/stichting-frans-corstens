@@ -1,10 +1,22 @@
 import { fetchPage } from "./../../utils/lib/Page/fetchPage";
+import { fetchPages } from "./../../utils/lib/Pages/fetchPages";
 import type { Metadata } from "next";
 import { Content } from "./../components/Content/Content";
 import { RelatedPages } from "./../components/RelatedPages/RelatedPages";
 import { Projects } from "./../components/Projects/Projects";
 import { Posts } from "./../components/Posts/Posts";
 import { FormContact } from "./../components/FormContact/FormContact";
+
+export async function generateStaticParams() {
+  const pages = await fetchPages({});
+
+  return pages.pages.map((page) => {
+    const slugs = page.slug.split("/");
+    return {
+      slug: slugs.filter((slug) => slug !== ""),
+    };
+  });
+}
 
 export async function generateMetadata({
   params,
