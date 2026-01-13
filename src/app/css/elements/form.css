@@ -3,16 +3,16 @@ form {
 }
 
 fieldset {
-  border: 0;
   padding: 0;
+  border: 0;
 }
 
 legend {
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-heading);
   display: block;
   margin-block-end: var(--spacing-2);
   font-family: var(--font-family-headings);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
 }
 
 label {
@@ -21,25 +21,25 @@ label {
 }
 
 textarea {
-  resize: vertical;
   line-height: 1.6;
+  resize: vertical;
 }
 
 input,
 textarea {
-  margin-block-end: var(--spacing-1);
   display: block;
-  font-size: 1em;
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  margin-block-end: var(--spacing-1);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
   color: currentcolor;
   background: transparent;
   border: 3px solid var(--color-primary);
-  font-family: var(--font-family-base);
-  width: 100%;
-  padding: var(--spacing-3) var(--spacing-4);
   transition: border-color var(--transition);
 
   &:focus {
-    border-color: var(--color-primary-light);
     outline: none;
+    border-color: var(--color-primary-light);
   }
 }

@@ -1,8 +1,8 @@
 .list {
-  list-style: none outside;
-  padding-inline-start: 0;
   display: grid;
   gap: var(--spacing-8);
+  padding-inline-start: 0;
+  list-style: none outside;
 
   &.highlights {
     grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
@@ -29,18 +29,18 @@
   }
 
   @container achive-list (width > 32em) {
-    gap: var(--spacing-8);
     grid-template-columns: 12em auto;
+    gap: var(--spacing-8);
   }
 }
 
 .image {
-  object-fit: cover;
-  aspect-ratio: 5 / 2;
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 5 / 2;
   margin-block-start: var(--spacing-2);
+  object-fit: cover;
 
   @container achive-list (width > 32em) {
     aspect-ratio: 3 / 2;

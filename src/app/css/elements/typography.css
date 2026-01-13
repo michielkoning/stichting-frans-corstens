@@ -17,8 +17,8 @@ p {
 h1,
 h2,
 h3 {
-  line-height: var(--line-height-heading);
   font-family: var(--font-family-headings);
+  line-height: var(--line-height-heading);
 }
 
 h1 {
@@ -37,18 +37,18 @@ h3 {
 }
 
 blockquote {
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-heading);
-  font-family: var(--font-family-headings);
+  position: relative;
   padding-inline-start: var(--spacing-6);
   margin: var(--spacing-4) var(--spacing-4) var(--spacing-6);
-  position: relative;
+  font-family: var(--font-family-headings);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
 
   &::before {
-    font-size: var(--font-size-h1);
-    left: 0;
     position: absolute;
+    left: 0;
     display: inline-block;
+    font-size: var(--font-size-h1);
     content: "“";
   }
 }

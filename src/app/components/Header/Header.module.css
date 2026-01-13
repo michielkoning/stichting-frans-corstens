@@ -1,33 +1,33 @@
 .header {
   display: block;
-  background: var(--color-background-alternative);
   color: var(--color-text-alternative);
+  background: var(--color-background-alternative);
 }
 
 .list {
-  list-style: none outside;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: var(--spacing-4);
+  justify-content: space-between;
   padding-inline-start: 0;
   margin-block-end: 0;
+  list-style: none outside;
 }
 
 .sub-list {
-  padding: var(--spacing-2) 0;
-  background: var(--color-background-alternative);
-  color: var(--color-text-alternative);
-  white-space: nowrap;
   position: absolute;
   inset: 100% auto auto 0;
-  list-style: none outside;
   display: none;
+  padding: var(--spacing-2) 0;
+  color: var(--color-text-alternative);
+  white-space: nowrap;
+  list-style: none outside;
+  background: var(--color-background-alternative);
 }
 
 .list-item {
-  padding-block: var(--spacing-4);
   position: relative;
+  padding-block: var(--spacing-4);
 
   &:hover .sub-list {
     display: block;

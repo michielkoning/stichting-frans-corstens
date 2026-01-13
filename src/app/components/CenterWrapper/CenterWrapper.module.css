@@ -1,4 +1,4 @@
 .wrapper {
-  margin-inline: max(0px, ((100% - var(--container-size))/2));
   padding-inline: var(--gutter);
+  margin-inline: max(0px, ((100% - var(--container-size))/2));
 }

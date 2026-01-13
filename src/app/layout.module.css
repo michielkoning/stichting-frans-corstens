@@ -1,10 +1,10 @@
 .body {
   display: flex;
-  min-height: 100dvh;
   flex-direction: column;
+  min-height: 100dvh;
 }
 
 .main {
-  padding-block-end: var(--spacing-8);
   flex: 1 0 auto;
+  padding-block-end: var(--spacing-8);
 }

@@ -1,11 +1,11 @@
 button {
-  border: 1px solid var(--color-light-pink);
   display: block;
-  background: var(--color-primary);
-  font-size: 1em;
-  color: var(--color-text);
   padding: var(--spacing-3) var(--spacing-8);
   font-family: var(--font-family-base);
+  font-size: 1em;
+  color: var(--color-text);
+  background: var(--color-primary);
+  border: 1px solid var(--color-light-pink);
   transition: background-color var(--transition);
 
   &:hover {
