@@ -16,7 +16,7 @@ const getUrl = ({
   parentId?: number;
 }) => {
   // const apiUrl = process.env.API_URL;
-  const apiUrl = "http://77.248.18.233:8080/wp-json/wp/v2/";
+  const apiUrl = `${process.env.API_URL}/wp-json/wp/v2/`;
 
   const baseUrl = `${apiUrl}${type}/`;
 
@@ -31,7 +31,7 @@ const getUrl = ({
 
   const allFields = ["id", ...fields];
   url.searchParams.set("status", "publish");
-  url.searchParams.set("context", "edit");
+  // url.searchParams.set("context", "edit");
   url.searchParams.set("_fields", allFields.join(","));
 
   if (excludeId) {

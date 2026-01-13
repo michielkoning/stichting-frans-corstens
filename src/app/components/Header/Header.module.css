@@ -7,19 +7,11 @@
 .list {
   list-style: none outside;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--spacing-4);
   padding-inline-start: 0;
   margin-block-end: 0;
-}
-
-.list-item {
-  padding-block: var(--spacing-4);
-  position: relative;
-
-  &:hover .sub-list {
-    display: block;
-  }
 }
 
 .sub-list {
@@ -31,6 +23,15 @@
   inset: 100% auto auto 0;
   list-style: none outside;
   display: none;
+}
+
+.list-item {
+  padding-block: var(--spacing-4);
+  position: relative;
+
+  &:hover .sub-list {
+    display: block;
+  }
 }
 
 .sub-list-link {

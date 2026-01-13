@@ -20,6 +20,11 @@ label {
   margin-block-end: var(--spacing-1);
 }
 
+textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
 input,
 textarea {
   margin-block-end: var(--spacing-1);
@@ -37,9 +42,4 @@ textarea {
     border-color: var(--color-primary-light);
     outline: none;
   }
-}
-
-textarea {
-  resize: vertical;
-  line-height: 1.6;
 }

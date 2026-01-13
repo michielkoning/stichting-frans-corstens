@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint:js": "eslint . --fix",
+    "lint:css": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -17,11 +18,16 @@
     "zod": "^4.3.5"
   },
   "devDependencies": {
+    "@stylistic/stylelint-config": "^3.0.1",
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "stylelint": "^16.26.1",
+    "stylelint-config-recess-order": "^7.4.0",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-config-standard-vue": "^1.0.0",
     "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"

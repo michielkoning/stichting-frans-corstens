@@ -1,4 +1,4 @@
-@import "./typography.css";
-@import "./scaffolding.css";
-@import "./form.css";
-@import "./buttons.css";
+@import url("./typography.css");
+@import url("./scaffolding.css");
+@import url("./form.css");
+@import url("./buttons.css");

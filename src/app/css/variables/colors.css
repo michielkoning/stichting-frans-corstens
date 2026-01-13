@@ -4,25 +4,25 @@
   --color-blue: #385170;
   --color-blue-dark: #142d4c;
   --color-black: #222;
-
   --color-background: light-dark(var(--color-white), var(--color-blue-dark));
   --color-text: light-dark(var(--color-blue-dark), var(--color-white));
-
-  --color-background-alternative: light-dark(
-    var(--color-black),
-    var(--color-black)
-  );
+  --color-background-alternative:
+    light-dark(
+      var(--color-black),
+      var(--color-black)
+    );
   --color-text-alternative: light-dark(var(--color-white), var(--color-white));
-
-  --color-primary-light: color-mix(
-    in oklab,
-    var(--color-primary) 50%,
-    var(--color-white)
-  );
+  --color-primary-light:
+    color-mix(
+      in oklab,
+      var(--color-primary) 50%,
+      var(--color-white)
+    );
   --color-primary: light-dark(#171717, var(--color-blue));
-  --color-primary-dark: color-mix(
-    in oklab,
-    var(--color-primary) 50%,
-    var(--color-blue-dark)
-  );
+  --color-primary-dark:
+    color-mix(
+      in oklab,
+      var(--color-primary) 50%,
+      var(--color-blue-dark)
+    );
 }

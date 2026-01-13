@@ -10,12 +10,12 @@
 
 .wp-block-gallery {
   margin: var(--spacing-12) 0;
-
   display: grid;
 
   .wp-block-image {
     margin: 0;
   }
+
   gap: var(--gutter);
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }

@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { z } from "zod";
 import { parse } from "zod/v4-mini";
 
@@ -7,7 +6,6 @@ export const parseData = <T extends z.ZodTypeAny>(data: unknown, schema: T) => {
 
   if (!parsed.success) {
     console.log(z.prettifyError(parsed.error));
-    return notFound();
   }
 
   return parsed.data as z.infer<T>;

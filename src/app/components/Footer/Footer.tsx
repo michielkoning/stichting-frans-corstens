@@ -13,14 +13,16 @@ const schema = z.array(
     title: z.string(),
     url: z
       .string()
-      .transform((val) => val.replace("http://77.248.18.233:8080", "")),
+      .transform((val) =>
+        val.replace(process.env.API_URL ?? "", "").replace("/home/", "/")
+      ),
     menu_item_parent: z.string().transform((val) => Number(val)),
   })
 );
 
 export const Footer: FunctionComponent = async () => {
   const response = await fetch(
-    "http://77.248.18.233:8080/wp-json/stichting-frans-corstens/menu/footer"
+    `${process.env.API_URL}/wp-json/stichting-frans-corstens/menu/footer`
   );
   const data = await response.json();
   const parsed = schema.safeParse(data);
