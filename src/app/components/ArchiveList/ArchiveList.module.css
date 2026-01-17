@@ -15,9 +15,7 @@
 }
 
 .wrapper {
-  &:has(.highlights) {
-    padding-block: var(--spacing-12);
-  }
+  padding-block: var(--spacing-8);
 }
 
 .list-item-wrapper {

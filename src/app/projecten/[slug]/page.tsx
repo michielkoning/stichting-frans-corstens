@@ -36,13 +36,14 @@ export default async function Post({
   const entry = await fetchProject(slug);
 
   return (
-    <Content
-      title={entry.title}
-      content={entry.content}
-      image={entry.image}
-      id={entry.id}
-    >
+    <>
+      <Content
+        title={entry.title}
+        content={entry.content}
+        image={entry.image}
+        id={entry.id}
+      />
       <Projects excludeId={entry.id} />
-    </Content>
+    </>
   );
 }

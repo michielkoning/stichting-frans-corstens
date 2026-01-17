@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+  padding-bottom: 8vw;
+  background: var(--color-background);
+
+  &:nth-child(even) {
+    --theme-icon-fill: var(--color-background);
+    --theme-icon-scale-x: -1;
+
+    color: var(--color-text-alernative);
+    background: var(--color-background-alernative);
+  }
+
+  &:last-child .svg {
+    display: none;
+  }
+}
+
+.svg {
+  position: absolute;
+  inset: auto 0 -1px;
+  display: block;
+  fill: var(--theme-icon-fill, var(--color-background-alernative));
+  scale: var(--theme-icon-scale-x, 1) 1;
+}

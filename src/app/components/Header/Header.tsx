@@ -20,7 +20,7 @@ const schema = z.array(
 
 export const Header: FunctionComponent = async () => {
   const response = await fetch(
-    `${process.env.API_URL}/wp-json/stichting-frans-corstens/menu/footer`
+    `${process.env.API_URL}/wp-json/stichting-frans-corstens/menu/header`
   );
   const data = await response.json();
   const parsed = schema.safeParse(data);

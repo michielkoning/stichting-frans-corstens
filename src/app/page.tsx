@@ -32,10 +32,11 @@ export default async function Page({
   const parentId = entry.parentId > 0 ? entry.parentId : entry.id;
 
   return (
-    <Content {...entry}>
-      <RelatedPages parentId={parentId} id={entry.id} title={entry.title} />
+    <>
+      <Content {...entry} />
       <Projects variant="highlights" />
+      <RelatedPages parentId={parentId} id={entry.id} title={entry.title} />
       <Posts />
-    </Content>
+    </>
   );
 }

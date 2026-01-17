@@ -51,13 +51,14 @@ export default async function Page({
   if (slug.includes("projecten")) pageType = "page-projects";
 
   return (
-    <Content {...entry}>
+    <>
+      <Content {...entry} />
       <RelatedPages parentId={parentId} id={entry.id} title={entry.title} />
       {pageType === "page-posts" && <Posts />}
       {pageType === "page-contact" && <FormContact />}
       <Projects
         variant={pageType === "page-projects" ? "list" : "highlights"}
       />
-    </Content>
+    </>
   );
 }

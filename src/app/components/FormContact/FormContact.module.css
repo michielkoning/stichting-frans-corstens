@@ -1,3 +1,7 @@
+.wrapper {
+  padding-block: var(--spacing-8);
+}
+
 .form-item {
   margin-block-end: var(--spacing-4);
 }

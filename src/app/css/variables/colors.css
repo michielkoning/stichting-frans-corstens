@@ -1,11 +1,31 @@
 :root {
+  --color-dominant-light: #f3f6f3;
+  --color-secondary-light: #367d39;
+  --color-accent-light: #60cc33;
+  --text-on-dominant-light: #367d39;
+  --text-on-secondary-light: #fff;
+  --text-on-accent-light: #474747;
+}
+
+:root {
+  --color-dominant-dark: #0c3120;
+  --color-secondary-dark: #196643;
+  --color-accent-dark: #65e6ab;
+  --text-on-dominant-dark: #fff;
+  --text-on-secondary-dark: #fff;
+  --text-on-accent-dark: #474747;
+}
+
+:root {
   --color-white: #ececec;
   --color-green: #9fd3c7;
   --color-blue: #385170;
   --color-blue-dark: #142d4c;
   --color-black: #222;
-  --color-background: light-dark(var(--color-white), var(--color-blue-dark));
-  --color-text: light-dark(var(--color-blue-dark), var(--color-white));
+
+  /* --color-background: light-dark(var(--color-white), var(--color-blue-dark)); */
+
+  /* --color-text: light-dark(var(--color-blue-dark), var(--color-white)); */
   --color-background-alternative:
     light-dark(
       var(--color-black),
@@ -25,4 +45,11 @@
       var(--color-primary) 50%,
       var(--color-blue-dark)
     );
+}
+
+:root {
+  --color-background: var(--color-dominant-dark);
+  --color-text: var(--text-on-dominant-dark);
+  --color-background-alernative: var(--color-secondary-dark);
+  --color-text-alernative: var(--text-on-secondary-dark);
 }
