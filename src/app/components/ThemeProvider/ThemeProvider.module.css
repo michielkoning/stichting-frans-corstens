@@ -1,3 +1,17 @@
+.svg {
+  position: absolute;
+  inset: auto 0 -1px;
+  display: block;
+  opacity: 0.5;
+  fill: var(--theme-icon-fill, var(--color-background-alernative));
+  scale: -1 1;
+
+  + .svg {
+    fill: var(--color-background);
+    scale: 1 -1;
+  }
+}
+
 .wrapper {
   position: relative;
   padding-bottom: 8vw;
@@ -14,12 +28,4 @@
   &:last-child .svg {
     display: none;
   }
-}
-
-.svg {
-  position: absolute;
-  inset: auto 0 -1px;
-  display: block;
-  fill: var(--theme-icon-fill, var(--color-background-alernative));
-  scale: var(--theme-icon-scale-x, 1) 1;
 }

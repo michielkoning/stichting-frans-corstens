@@ -2,8 +2,7 @@ import { Ubuntu } from "next/font/google";
 import "./css/globals.css";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
-import { CenterWrapper } from "./components/CenterWrapper/CenterWrapper";
-import { Metadata, Viewport } from "next";
+import { Metadata} from "next";
 import styles from "./layout.module.css";
 
 const ubuntu = Ubuntu({

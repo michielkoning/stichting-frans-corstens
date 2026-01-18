@@ -6,7 +6,7 @@ export const RelatedPages: FunctionComponent<{
   parentId: number;
   id: number;
   title: string;
-}> = async ({ parentId, id, title }) => {
+}> = async ({ parentId, id }) => {
   const data = await fetchPages({
     parentId,
     excludeId: id,

@@ -3,7 +3,6 @@ import { CenterWrapper } from "../CenterWrapper/CenterWrapper";
 import styles from "./Footer.module.css";
 import { FunctionComponent } from "react";
 import { z } from "zod";
-import { parseData } from "utils/parseData";
 import { fetchPosts } from "utils/lib/Posts/fetchPosts";
 import { fetchProjects } from "utils/lib/Projects/fetchProjects";
 
