@@ -2,16 +2,15 @@
   position: relative;
   display: block;
   padding-block: var(--spacing-8) var(--spacing-12);
-  padding-top: 0;
-  color: var(--color-text-alternative);
-  background: var(--color-background-alternative);
+  color: var(--text-on-secondary);
+  background: var(--color-secondary);
 }
 
 .svg {
   position: absolute;
   inset: -9vw 0 auto;
   display: block;
-  fill: var(--color-background-alternative);
+  fill: var(--color-secondary);
   scale: -1 1;
 }
 

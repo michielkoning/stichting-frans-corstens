@@ -3,8 +3,8 @@
 }
 
 ::selection {
-  color: var(--color-background);
-  background: var(--color-text);
+  color: var(--text-on-accent);
+  background: var(--color-accent);
 }
 
 * {
@@ -17,8 +17,8 @@
 
 body {
   margin: 0;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: var(--text-on-dominant);
+  background: var(--color-dominant);
 }
 
 p {

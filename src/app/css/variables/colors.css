@@ -1,55 +1,77 @@
 :root {
-  --color-dominant-light: #f3f6f3;
-  --color-secondary-light: #367d39;
-  --color-accent-light: #60cc33;
-  --text-on-dominant-light: #367d39;
-  --text-on-secondary-light: #fff;
-  --text-on-accent-light: #474747;
-}
+  /* Light theme */
+  --color-dominant-theme-light: #ebf7ff;
+  --color-secondary-theme-light: #004066;
+  --color-accent-theme-light: #0077be;
+  --text-on-dominant-theme-light: #004066;
+  --text-on-secondary-theme-light: #fff;
+  --text-on-accent-theme-light: #fff;
 
-:root {
-  --color-dominant-dark: #0c3120;
-  --color-secondary-dark: #196643;
-  --color-accent-dark: #65e6ab;
-  --text-on-dominant-dark: #fff;
-  --text-on-secondary-dark: #fff;
-  --text-on-accent-dark: #474747;
-}
+  /* Dark theme */
+  --color-dominant-theme-dark: #00263d;
+  --color-secondary-theme-dark: #005080;
+  --color-accent-theme-dark: #4dbcff;
+  --text-on-dominant-theme-dark: #fff;
+  --text-on-secondary-theme-dark: #fff;
+  --text-on-accent-theme-dark: #000;
 
-:root {
-  --color-white: #ececec;
-  --color-green: #9fd3c7;
-  --color-blue: #385170;
-  --color-blue-dark: #142d4c;
-  --color-black: #222;
+  /* Set colors */
+  --color-dominant: light-dark(
+    var(--color-dominant-theme-light),
+    var(--color-dominant-theme-dark)
+  );
+  --color-secondary: light-dark(
+    var(--color-secondary-theme-light),
+    var(--color-secondary-theme-dark)
+  );
+  --color-accent: light-dark(
+    var(--color-accent-theme-light),
+    var(--color-accent-theme-dark)
+  );
+  --text-on-dominant: light-dark(
+    var(--text-on-dominant-theme-light),
+    var(--text-on-dominant-theme-dark)
+  );
+  --text-on-secondary: light-dark(
+    var(--text-on-secondary-theme-light),
+    var(--text-on-secondary-theme-dark)
+  );
+  --text-on-accent: light-dark(
+    var(--text-on-accent-theme-light),
+    var(--text-on-accent-theme-dark)
+  );
 
-  /* --color-background: light-dark(var(--color-white), var(--color-blue-dark)); */
+  /* Tints */
+  --color-dominant-alternative-theme-light: hsl(
+    from var(--color-dominant) h s calc(l - 10)
+  );
+  --color-secondary-alternative-theme-light: hsl(
+    from var(--color-secondary) h s calc(l - 10)
+  );
+  --color-accent-alternative-theme-light: hsl(
+    from var(--color-accent) h s calc(l - 10)
+  );
+  --color-dominant-alternative-theme-dark: hsl(
+    from var(--color-dominant) h s calc(l + 10)
+  );
+  --color-secondary-alternative-theme-dark: hsl(
+    from var(--color-secondary) h s calc(l + 10)
+  );
+  --color-accent-alternative-theme-dark: hsl(
+    from var(--color-accent) h s calc(l + 10)
+  );
 
-  /* --color-text: light-dark(var(--color-blue-dark), var(--color-white)); */
-  --color-background-alternative:
-    light-dark(
-      var(--color-black),
-      var(--color-black)
-    );
-  --color-text-alternative: light-dark(var(--color-white), var(--color-white));
-  --color-primary-light:
-    color-mix(
-      in oklab,
-      var(--color-primary) 50%,
-      var(--color-white)
-    );
-  --color-primary: light-dark(#171717, var(--color-blue));
-  --color-primary-dark:
-    color-mix(
-      in oklab,
-      var(--color-primary) 50%,
-      var(--color-blue-dark)
-    );
-}
-
-:root {
-  --color-background: var(--color-dominant-dark);
-  --color-text: var(--text-on-dominant-dark);
-  --color-background-alernative: var(--color-secondary-dark);
-  --color-text-alernative: var(--text-on-secondary-dark);
+  /* Tints */
+  --color-dominant-alternative: light-dark(
+    var(--color-dominant-alternative-theme-light),
+    var(--color-dominant-alternative-theme-dark)
+  );
+  --color-secondary-alternative: light-dark(
+    var(--color-secondary-alternative-theme-light),
+    var(--color-secondary-alternative-theme-dark)
+  );
+  --color-accent-alternative: light-dark(
+    var(--color-accent-alternative-theme-light),
+    var(--color-accent-alternative-theme-dark)
+  );
 }

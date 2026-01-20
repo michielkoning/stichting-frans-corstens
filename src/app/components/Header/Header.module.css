@@ -1,8 +1,8 @@
 .header {
   position: relative;
   display: block;
-  color: var(--color-text-alternative);
-  background: var(--color-background-alternative);
+  color: var(--text-on-secondary);
+  background: var(--color-secondary);
 }
 
 .svg {
@@ -10,7 +10,7 @@
   inset: calc(100% - 1px) 0 auto;
   z-index: 99;
   display: block;
-  fill: var(--color-background-alternative);
+  fill: var(--color-secondary);
   scale: 1 -1;
 }
 
@@ -29,10 +29,10 @@
   inset: 100% auto auto 0;
   display: none;
   padding: var(--spacing-2) 0;
-  color: var(--color-text-alternative);
+  color: var(--text-on-secondary);
   white-space: nowrap;
   list-style: none outside;
-  background: var(--color-background-alternative);
+  background: var(--color-secondary);
 }
 
 .list-item {

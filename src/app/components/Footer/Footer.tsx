@@ -44,13 +44,13 @@ export const Footer: FunctionComponent = async () => {
 
   return (
     <footer className={styles.footer}>
-      {/* <svg
+      <svg
         className={styles.svg}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1920 301"
       >
         <path d="M1920 301V143.7C1293.5 19.8 648.5-25 0 15.4V301h1920z"></path>{" "}
-      </svg>*/}
+      </svg>
       <CenterWrapper>
         <nav className={styles.nav}>
           <div>

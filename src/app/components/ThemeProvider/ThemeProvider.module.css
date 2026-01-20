@@ -2,27 +2,25 @@
   position: absolute;
   inset: auto 0 -1px;
   display: block;
-  opacity: 0.5;
-  fill: var(--theme-icon-fill, var(--color-background-alernative));
-  scale: -1 1;
+  fill: var(--theme-icon-fill, var(--color-dominant-alternative));
+  scale: var(--theme-icon-scale-x, 1) 1;
 
   + .svg {
-    fill: var(--color-background);
+    fill: var(--color-dominant);
     scale: 1 -1;
   }
 }
 
 .wrapper {
   position: relative;
-  padding-bottom: 8vw;
-  background: var(--color-background);
+  padding-bottom: 4vw;
+  background: var(--color-dominant);
 
   &:nth-child(even) {
-    --theme-icon-fill: var(--color-background);
+    --theme-icon-fill: var(--color-dominant);
     --theme-icon-scale-x: -1;
 
-    color: var(--color-text-alernative);
-    background: var(--color-background-alernative);
+    background: var(--color-dominant-alternative);
   }
 
   &:last-child .svg {
