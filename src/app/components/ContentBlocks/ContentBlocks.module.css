@@ -1,4 +1,4 @@
-.wp-block-image {
+.image {
   margin-block: var(--spacing-12);
 
   img {
@@ -8,14 +8,18 @@
   }
 }
 
-.wp-block-gallery {
+.gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-2);
   margin-block: var(--spacing-12);
 
-  .wp-block-image {
+  .image {
     margin: 0;
+  }
+
+  figure {
+    height: 100%;
   }
 
   img {
@@ -26,7 +30,7 @@
   @media (width >= 786px) {
     grid-template-columns: repeat(6, 1fr);
 
-    .wp-block-image {
+    .image {
       &:nth-child(8n + 1),
       &:nth-child(8n + 5) {
         grid-row: span 2;
@@ -45,9 +49,5 @@
         grid-column: span 3;
       }
     }
-  }
-
-  @media (width >= 1280px) {
-    margin-inline: calc(var(--gutter) * -1);
   }
 }

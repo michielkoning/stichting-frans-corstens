@@ -1,12 +1,13 @@
 import { FunctionComponent } from "react";
 import { type BlockType } from "./../Content/ContentType";
 import { CenterWrapper } from "./../CenterWrapper/CenterWrapper";
+import styles from "./ContentBlocks.module.css";
 
 const Image: FunctionComponent<BlockType> = ({ innerHTML }) => {
   return (
     <div
       dangerouslySetInnerHTML={{ __html: innerHTML }}
-      className="wp-block-image"
+      className={styles.image}
     />
   );
 };
@@ -25,7 +26,7 @@ const GalleryBlock: FunctionComponent<BlockType> = ({
 }) => {
   return (
     <CenterWrapper>
-      <div className="wp-block-gallery">
+      <div className={styles.gallery}>
         {innerBlocks.map((image, iindex) => (
           <Image {...image} key={iindex} />
         ))}
