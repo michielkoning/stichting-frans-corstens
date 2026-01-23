@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import { type BlockType } from "./../ContentType";
-import { CenterWrapper } from "./../../CenterWrapper/CenterWrapper";
+import { type BlockType } from "./../Content/ContentType";
+import { CenterWrapper } from "./../CenterWrapper/CenterWrapper";
 
 const Image: FunctionComponent<BlockType> = ({ innerHTML }) => {
   return (
@@ -11,7 +11,7 @@ const Image: FunctionComponent<BlockType> = ({ innerHTML }) => {
   );
 };
 
-const ContentImage: FunctionComponent<BlockType> = (props) => {
+const ImageBlock: FunctionComponent<BlockType> = (props) => {
   return (
     <CenterWrapper>
       <Image {...props} />
@@ -19,7 +19,7 @@ const ContentImage: FunctionComponent<BlockType> = (props) => {
   );
 };
 
-const ContentGallery: FunctionComponent<BlockType> = ({
+const GalleryBlock: FunctionComponent<BlockType> = ({
   innerHTML,
   innerBlocks,
 }) => {
@@ -34,7 +34,7 @@ const ContentGallery: FunctionComponent<BlockType> = ({
   );
 };
 
-const ContentDefault: FunctionComponent<BlockType> = ({ innerHTML }) => {
+const DefaultBlock: FunctionComponent<BlockType> = ({ innerHTML }) => {
   return (
     <CenterWrapper size="md">
       <div dangerouslySetInnerHTML={{ __html: innerHTML }} />
@@ -42,19 +42,19 @@ const ContentDefault: FunctionComponent<BlockType> = ({ innerHTML }) => {
   );
 };
 
-export const ComponentRendered: FunctionComponent<{ items: BlockType[] }> = ({
+export const ContentBlocks: FunctionComponent<{ items: BlockType[] }> = ({
   items,
 }) => {
   const components = {
-    "core/image": ContentImage,
-    "core/gallery": ContentGallery,
-    "core/paragraph": ContentDefault,
-    "core/heading": ContentDefault,
-    "core/list": ContentDefault,
-    "core/list-item": ContentDefault,
-    "core/quote": ContentDefault,
-    "core/button": ContentDefault,
-    "core/pullquote": ContentDefault,
+    "core/image": ImageBlock,
+    "core/gallery": GalleryBlock,
+    "core/paragraph": DefaultBlock,
+    "core/heading": DefaultBlock,
+    "core/list": DefaultBlock,
+    "core/list-item": DefaultBlock,
+    "core/quote": DefaultBlock,
+    "core/button": DefaultBlock,
+    "core/pullquote": DefaultBlock,
   };
 
   return items.map((item, index) => {

@@ -5,14 +5,12 @@ import { RelatedPages } from "./components/RelatedPages/RelatedPages";
 import { Projects } from "./components/Projects/Projects";
 import { Posts } from "./components/Posts/Posts";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const { slug } = await params;
+const POST_ID = 23;
 
-  const entry = await fetchPage({ slug });
+export async function generateMetadata(): Promise<Metadata> {
+  const entry = await fetchPage({
+    id: POST_ID,
+  });
 
   return {
     title: entry.title,
@@ -20,14 +18,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-
-  const entry = await fetchPage({ slug });
+export default async function Page() {
+  const entry = await fetchPage({
+    id: POST_ID,
+  });
 
   const parentId = entry.parentId > 0 ? entry.parentId : entry.id;
 
