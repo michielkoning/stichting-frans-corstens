@@ -43,7 +43,7 @@ export const FormContact: FunctionComponent = () => {
   return (
     <ThemeProvider>
       <div className={styles.wrapper}>
-        <CenterWrapper>
+        <CenterWrapper size="md">
           <form onSubmit={onSubmit} method="POST" data-netlify="true">
             <fieldset>
               <legend>Contactformulier</legend>

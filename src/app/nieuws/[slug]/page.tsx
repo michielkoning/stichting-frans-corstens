@@ -37,13 +37,14 @@ export default async function Post({
   const entry = await fetchPost(slug);
 
   return (
-    <Content
-      title={entry.title}
-      content={entry.content}
-      image={entry.image}
-      id={entry.id}
-    >
+    <>
+      <Content
+        title={entry.title}
+        content={entry.content}
+        image={entry.image}
+        id={entry.id}
+      />
       <Posts excludeId={entry.id} />
-    </Content>
+    </>
   );
 }

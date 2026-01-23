@@ -1,4 +1,5 @@
 :root {
-  --container-size: 64em;
+  --container-size-lg: 64em;
+  --container-size-md: 48em;
   --gutter: var(--spacing-4);
 }

@@ -36,11 +36,7 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 5 / 2;
+  aspect-ratio: 16 / 9;
   margin-block-start: var(--spacing-2);
   object-fit: cover;
-
-  @container achive-list (width > 32em) {
-    aspect-ratio: 3 / 2;
-  }
 }

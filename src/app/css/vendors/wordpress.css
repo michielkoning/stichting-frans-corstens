@@ -1,5 +1,5 @@
 .wp-block-image {
-  margin: var(--spacing-12) calc(var(--gutter) * -1);
+  margin-block: var(--spacing-12);
 
   img {
     display: block;

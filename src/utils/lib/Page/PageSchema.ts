@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { ImageSchema } from "../Images/imageSchema";
+import { ContentSchema } from "../Content/ContentSchema";
 
 export const PageSchema = z.array(
   z.object({
@@ -8,7 +9,7 @@ export const PageSchema = z.array(
       rendered: z.string(),
     }),
     content: z.object({
-      rendered: z.string(),
+      raw: ContentSchema,
     }),
     excerpt: z.object({
       rendered: z.string(),

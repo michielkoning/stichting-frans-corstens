@@ -8,9 +8,9 @@ export const getPage = (data: z.infer<typeof PageSchema>) => {
   return {
     id: entry.id,
     title: entry.title.rendered,
-    content: entry.content.rendered,
     description: entry.excerpt.rendered,
     image: getImage(entry._embedded["wp:featuredmedia"]),
     parentId: entry.parent,
+    content: entry.content.raw,
   };
 };
