@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { parse } from "zod/v4-mini";
 
 export const parseData = <T extends z.ZodTypeAny>(data: unknown, schema: T) => {
   const parsed = schema.safeParse(data);

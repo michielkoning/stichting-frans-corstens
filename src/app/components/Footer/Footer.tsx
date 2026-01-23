@@ -49,7 +49,7 @@ export const Footer: FunctionComponent = async () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1920 301"
       >
-        <path d="M1920 301V143.7C1293.5 19.8 648.5-25 0 15.4V301h1920z"></path>{" "}
+        <path d="M1920 301V143.7C1293.5 19.8 648.5-25 0 15.4V301h1920z" />
       </svg>
       <CenterWrapper>
         <nav className={styles.nav}>
@@ -78,7 +78,7 @@ export const Footer: FunctionComponent = async () => {
             </ul>
           </div>
           <div>
-            <h2>Uitgelichte pagina's</h2>
+            <h2>Uitgelichte pagina&apos;s</h2>
             <ul className={styles.list}>{items}</ul>
           </div>
         </nav>

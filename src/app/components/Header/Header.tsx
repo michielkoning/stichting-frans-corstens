@@ -3,7 +3,6 @@ import { CenterWrapper } from "../CenterWrapper/CenterWrapper";
 import styles from "./Header.module.css";
 import { FunctionComponent } from "react";
 import { z } from "zod";
-import { parseData } from "utils/parseData";
 
 const schema = z.array(
   z.object({

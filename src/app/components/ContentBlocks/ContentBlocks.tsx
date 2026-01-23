@@ -3,7 +3,7 @@ import { type BlockType } from "./../Content/ContentType";
 import { CenterWrapper } from "./../CenterWrapper/CenterWrapper";
 import styles from "./ContentBlocks.module.css";
 
-const Image: FunctionComponent<BlockType> = ({ innerHTML }) => {
+const SingleImage: FunctionComponent<BlockType> = ({ innerHTML }) => {
   return (
     <div
       dangerouslySetInnerHTML={{ __html: innerHTML }}
@@ -15,20 +15,17 @@ const Image: FunctionComponent<BlockType> = ({ innerHTML }) => {
 const ImageBlock: FunctionComponent<BlockType> = (props) => {
   return (
     <CenterWrapper>
-      <Image {...props} />
+      <SingleImage {...props} />
     </CenterWrapper>
   );
 };
 
-const GalleryBlock: FunctionComponent<BlockType> = ({
-  innerHTML,
-  innerBlocks,
-}) => {
+const GalleryBlock: FunctionComponent<BlockType> = ({ innerBlocks }) => {
   return (
     <CenterWrapper>
       <div className={styles.gallery}>
         {innerBlocks.map((image, iindex) => (
-          <Image {...image} key={iindex} />
+          <SingleImage {...image} key={iindex} />
         ))}
       </div>
     </CenterWrapper>
