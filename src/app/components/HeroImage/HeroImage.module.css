@@ -1,13 +1,18 @@
 .image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  max-height: 50vh;
+  height: 100%;
   object-fit: cover;
 }
 
 .wrapper {
   position: relative;
+  aspect-ratio: 16 / 9;
+
+  @media (width >= 1024px) {
+    height: 30vw;
+    aspect-ratio: auto;
+  }
 }
 
 .svg {
