@@ -1,9 +1,5 @@
-# [build]
-  # command = "pnpm build"
-  # publish = "dist"
-
 [[headers]]
-  for = "/_next/image*"
+  for = "/_next/image"
   [headers.values]
 	cache-control = '''
 	max-age=31536000,
