@@ -1,5 +1,6 @@
 :root {
   color-scheme: light dark;
+  interpolate-size: allow-keywords;
 }
 
 ::selection {
@@ -13,6 +14,10 @@
   &::before {
     box-sizing: border-box;
   }
+}
+
+html {
+  text-size-adjust: 100%;
 }
 
 body {

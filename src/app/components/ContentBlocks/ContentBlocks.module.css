@@ -14,6 +14,10 @@
   gap: var(--spacing-2);
   margin-block: var(--spacing-12);
 
+  &:nth-child(3n) {
+    grid-column: span 2;
+  }
+
   .image {
     margin: 0;
   }

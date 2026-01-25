@@ -23,6 +23,12 @@ label {
 textarea {
   line-height: 1.6;
   resize: vertical;
+
+  @supports (field-sizing: content) {
+    min-height: 5rem;
+    resize: none;
+    field-sizing: content;
+  }
 }
 
 input,

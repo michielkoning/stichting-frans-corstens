@@ -1,5 +1,6 @@
 html {
   font-size: var(--font-size-base);
+  text-size-adjust: 100%;
 }
 
 body {
@@ -7,11 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: var(--line-height);
-  text-wrap: balance;
 }
 
 p {
   margin: 0 0 var(--spacing-4);
+  text-wrap: pretty;
 }
 
 h1,
@@ -19,15 +20,17 @@ h2,
 h3 {
   font-family: var(--font-family-headings);
   line-height: var(--line-height-heading);
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 h1 {
-  margin: 0 0 var(--spacing-4);
+  margin: var(--spacing-1) 0 var(--spacing-4);
   font-size: var(--font-size-h1);
 }
 
 h2 {
-  margin: 0 0 var(--spacing-2);
+  margin: var(--spacing-1) 0 var(--spacing-2);
   font-size: var(--font-size-h2);
 }
 
