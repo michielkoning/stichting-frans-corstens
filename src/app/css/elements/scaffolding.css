@@ -30,8 +30,11 @@ p {
   margin: 0 0 var(--spacing-4);
 }
 
-ul {
+ul,
+ol {
   margin: 0 0 var(--spacing-4);
+  padding-left: 1rem;
+  list-style-position: outside;
 }
 
 figure {

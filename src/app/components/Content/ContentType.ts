@@ -18,6 +18,6 @@ export type BlockType = {
 export type ContentType = {
   id: number;
   title: string;
-  content?: BlockType[];
+  content: string;
   image?: ImageType;
 };

@@ -53,11 +53,11 @@ export const Header: FunctionComponent = async () => {
 
   return (
     <header className={styles.header}>
-      <CenterWrapper>
-        <nav>
+      <nav className="nav">
+        <CenterWrapper>
           <ul className={styles.list}>{items}</ul>
-        </nav>
-      </CenterWrapper>
+        </CenterWrapper>
+      </nav>
     </header>
   );
 };

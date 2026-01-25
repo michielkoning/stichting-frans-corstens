@@ -3,7 +3,6 @@ import { ContentType } from "./ContentType";
 import { CenterWrapper } from "./../CenterWrapper/CenterWrapper";
 import { ThemeProvider } from "./../ThemeProvider/ThemeProvider";
 import { HeroImage } from "./../HeroImage/HeroImage";
-import { ContentBlocks } from "./../ContentBlocks/ContentBlocks";
 
 import styles from "./Content.module.css";
 
@@ -16,7 +15,10 @@ export const Content: FunctionComponent<ContentType> = (props) => {
           <h1>{props.title}</h1>
         </CenterWrapper>
 
-        {props.content && <ContentBlocks items={props.content} />}
+        <div
+          dangerouslySetInnerHTML={{ __html: props.content }}
+          className="content"
+        />
       </div>
     </ThemeProvider>
   );

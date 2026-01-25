@@ -8,7 +8,7 @@ export const getPost = (data: z.infer<typeof PostSchema>) => {
   return {
     id: entry.id,
     title: entry.title.rendered,
-    content: entry.content.raw,
+    content: entry.content.rendered,
     description: entry.excerpt.rendered,
     image: getImage(entry._embedded["wp:featuredmedia"]),
   };

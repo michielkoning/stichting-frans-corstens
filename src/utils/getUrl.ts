@@ -50,6 +50,7 @@ const getUrl = ({
     url.searchParams.set("slug", slug);
   }
 
+  console.log(url.toString());
   return url.toString();
 };
 

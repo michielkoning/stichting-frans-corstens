@@ -24,18 +24,47 @@ const GalleryBlock: FunctionComponent<BlockType> = ({ innerBlocks }) => {
   return (
     <CenterWrapper>
       <div className={styles.gallery}>
-        {innerBlocks.map((image, iindex) => (
-          <SingleImage {...image} key={iindex} />
-        ))}
+        <ContentBlocks items={innerBlocks} />
       </div>
     </CenterWrapper>
   );
 };
 
-const DefaultBlock: FunctionComponent<BlockType> = ({ innerHTML }) => {
+const ListItemBlock: FunctionComponent<BlockType> = ({ innerHTML }) => {
+  return <div dangerouslySetInnerHTML={{ __html: innerHTML }} />;
+};
+
+const ListBlock: FunctionComponent<BlockType> = ({ innerBlocks }) => {
+  return (
+    <CenterWrapper size="md">
+      <ul>
+        <ContentBlocks items={innerBlocks} />
+      </ul>
+    </CenterWrapper>
+  );
+};
+
+const QuoteBlock: FunctionComponent<BlockType> = ({
+  innerHTML,
+  innerBlocks,
+}) => {
+  return (
+    <CenterWrapper size="md">
+      <blockquote>
+        <ContentBlocks items={innerBlocks} />
+      </blockquote>
+    </CenterWrapper>
+  );
+};
+
+const DefaultBlock: FunctionComponent<BlockType> = ({
+  innerHTML,
+  innerBlocks,
+}) => {
   return (
     <CenterWrapper size="md">
       <div dangerouslySetInnerHTML={{ __html: innerHTML }} />
+      <ContentBlocks items={innerBlocks} />
     </CenterWrapper>
   );
 };
@@ -48,9 +77,9 @@ export const ContentBlocks: FunctionComponent<{ items: BlockType[] }> = ({
     "core/gallery": GalleryBlock,
     "core/paragraph": DefaultBlock,
     "core/heading": DefaultBlock,
-    "core/list": DefaultBlock,
-    "core/list-item": DefaultBlock,
-    "core/quote": DefaultBlock,
+    "core/list": ListBlock,
+    "core/list-item": ListItemBlock,
+    "core/quote": QuoteBlock,
     "core/button": DefaultBlock,
     "core/pullquote": DefaultBlock,
   };
