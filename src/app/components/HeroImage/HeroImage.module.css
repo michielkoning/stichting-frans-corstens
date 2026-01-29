@@ -1,12 +1,18 @@
-.wrapper {
-  position: relative;
-  background: var(--color-dominant-alternative);
-}
-
 .image {
   display: block;
-  max-width: calc(var(--container-size-lg) - (var(--gutter) * 2));
-  margin-inline: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+
+  @media (width >= 1024px) {
+    height: 30vw;
+    aspect-ratio: auto;
+  }
 }
 
 .svg {
