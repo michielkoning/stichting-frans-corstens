@@ -12,8 +12,8 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2(react-hook-form@7.71.1(react@19.2.4))
       '@wordpress/block-serialization-default-parser':
-        specifier: ^5.38.0
-        version: 5.38.0
+        specifier: ^5.39.0
+        version: 5.39.0
       next:
         specifier: 16.1.6
         version: 16.1.6(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -32,7 +32,7 @@ importers:
     devDependencies:
       '@stylistic/stylelint-config':
         specifier: ^4.0.0
-        version: 4.0.0(stylelint@17.0.0(typescript@5.9.3))
+        version: 4.0.0(stylelint@17.1.1(typescript@5.9.3))
       '@types/node':
         specifier: ^25
         version: 25.1.0
@@ -49,17 +49,17 @@ importers:
         specifier: 16.1.6
         version: 16.1.6(@typescript-eslint/parser@8.54.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       stylelint:
-        specifier: ^17.0.0
-        version: 17.0.0(typescript@5.9.3)
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.9.3)
       stylelint-config-recess-order:
         specifier: ^7.6.0
-        version: 7.6.0(stylelint-order@7.0.1(stylelint@17.0.0(typescript@5.9.3)))(stylelint@17.0.0(typescript@5.9.3))
+        version: 7.6.0(stylelint-order@7.0.1(stylelint@17.1.1(typescript@5.9.3)))(stylelint@17.1.1(typescript@5.9.3))
       stylelint-config-standard:
         specifier: ^40.0.0
-        version: 40.0.0(stylelint@17.0.0(typescript@5.9.3))
+        version: 40.0.0(stylelint@17.1.1(typescript@5.9.3))
       stylelint-config-standard-vue:
         specifier: ^1.0.0
-        version: 1.0.0(postcss-html@1.8.1)(stylelint@17.0.0(typescript@5.9.3))
+        version: 1.0.0(postcss-html@1.8.1)(stylelint@17.1.1(typescript@5.9.3))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -704,8 +704,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@wordpress/block-serialization-default-parser@5.38.0':
-    resolution: {integrity: sha512-iHqqlvuPGIz9ycU4Kce/zgti7zvDC+9i1hG5RIiMWAOX1Fwor4CPy9R1jZMXR64cBnW+nntP4mK0+KJeKmusiw==}
+  '@wordpress/block-serialization-default-parser@5.39.0':
+    resolution: {integrity: sha512-X2lFTu3Wq4QlKwA0YzTmzD3yX7dhi6lz+Xv+ki/qXpXUXGTS0H191uqgjDKGm7Y6qSVlgP1QTF26sAxRC56RwA==}
     engines: {node: '>=18.12.0', npm: '>=8.19.2'}
 
   acorn-jsx@5.3.2:
@@ -2035,8 +2035,8 @@ packages:
     peerDependencies:
       stylelint: ^16.18.0 || ^17.0.0
 
-  stylelint@17.0.0:
-    resolution: {integrity: sha512-saMZ2mqdQre4AfouxcbTdpVglDRcROb4MIucKHvgsDb/0IX7ODhcaz+EOIyfxAsm8Zjl/7j4hJj6MgIYYM8Xwg==}
+  stylelint@17.1.1:
+    resolution: {integrity: sha512-SBHVcLEcRF1M9OkD3oT0hT2PayDNLw2hd+aovmzfNQ2ys4Xd3oS9ZNizILWqhQvW802AqKN/vUTMwJqQYMBlWw==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -2584,12 +2584,12 @@ snapshots:
 
   '@standard-schema/utils@0.3.0': {}
 
-  '@stylistic/stylelint-config@4.0.0(stylelint@17.0.0(typescript@5.9.3))':
+  '@stylistic/stylelint-config@4.0.0(stylelint@17.1.1(typescript@5.9.3))':
     dependencies:
-      '@stylistic/stylelint-plugin': 5.0.1(stylelint@17.0.0(typescript@5.9.3))
-      stylelint: 17.0.0(typescript@5.9.3)
+      '@stylistic/stylelint-plugin': 5.0.1(stylelint@17.1.1(typescript@5.9.3))
+      stylelint: 17.1.1(typescript@5.9.3)
 
-  '@stylistic/stylelint-plugin@5.0.1(stylelint@17.0.0(typescript@5.9.3))':
+  '@stylistic/stylelint-plugin@5.0.1(stylelint@17.1.1(typescript@5.9.3))':
     dependencies:
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-tokenizer': 4.0.0
@@ -2598,7 +2598,7 @@ snapshots:
       postcss-selector-parser: 7.1.1
       postcss-value-parser: 4.2.0
       style-search: 0.1.0
-      stylelint: 17.0.0(typescript@5.9.3)
+      stylelint: 17.1.1(typescript@5.9.3)
 
   '@swc/helpers@0.5.15':
     dependencies:
@@ -2777,7 +2777,7 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
-  '@wordpress/block-serialization-default-parser@5.38.0': {}
+  '@wordpress/block-serialization-default-parser@5.39.0': {}
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -4290,48 +4290,48 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.28.6
 
-  stylelint-config-html@1.1.0(postcss-html@1.8.1)(stylelint@17.0.0(typescript@5.9.3)):
+  stylelint-config-html@1.1.0(postcss-html@1.8.1)(stylelint@17.1.1(typescript@5.9.3)):
     dependencies:
       postcss-html: 1.8.1
-      stylelint: 17.0.0(typescript@5.9.3)
+      stylelint: 17.1.1(typescript@5.9.3)
 
-  stylelint-config-recess-order@7.6.0(stylelint-order@7.0.1(stylelint@17.0.0(typescript@5.9.3)))(stylelint@17.0.0(typescript@5.9.3)):
+  stylelint-config-recess-order@7.6.0(stylelint-order@7.0.1(stylelint@17.1.1(typescript@5.9.3)))(stylelint@17.1.1(typescript@5.9.3)):
     dependencies:
-      stylelint: 17.0.0(typescript@5.9.3)
-      stylelint-order: 7.0.1(stylelint@17.0.0(typescript@5.9.3))
+      stylelint: 17.1.1(typescript@5.9.3)
+      stylelint-order: 7.0.1(stylelint@17.1.1(typescript@5.9.3))
 
-  stylelint-config-recommended-vue@1.6.1(postcss-html@1.8.1)(stylelint@17.0.0(typescript@5.9.3)):
+  stylelint-config-recommended-vue@1.6.1(postcss-html@1.8.1)(stylelint@17.1.1(typescript@5.9.3)):
     dependencies:
       postcss-html: 1.8.1
       semver: 7.7.3
-      stylelint: 17.0.0(typescript@5.9.3)
-      stylelint-config-html: 1.1.0(postcss-html@1.8.1)(stylelint@17.0.0(typescript@5.9.3))
-      stylelint-config-recommended: 18.0.0(stylelint@17.0.0(typescript@5.9.3))
+      stylelint: 17.1.1(typescript@5.9.3)
+      stylelint-config-html: 1.1.0(postcss-html@1.8.1)(stylelint@17.1.1(typescript@5.9.3))
+      stylelint-config-recommended: 18.0.0(stylelint@17.1.1(typescript@5.9.3))
 
-  stylelint-config-recommended@18.0.0(stylelint@17.0.0(typescript@5.9.3)):
+  stylelint-config-recommended@18.0.0(stylelint@17.1.1(typescript@5.9.3)):
     dependencies:
-      stylelint: 17.0.0(typescript@5.9.3)
+      stylelint: 17.1.1(typescript@5.9.3)
 
-  stylelint-config-standard-vue@1.0.0(postcss-html@1.8.1)(stylelint@17.0.0(typescript@5.9.3)):
+  stylelint-config-standard-vue@1.0.0(postcss-html@1.8.1)(stylelint@17.1.1(typescript@5.9.3)):
     dependencies:
       postcss-html: 1.8.1
-      stylelint: 17.0.0(typescript@5.9.3)
-      stylelint-config-html: 1.1.0(postcss-html@1.8.1)(stylelint@17.0.0(typescript@5.9.3))
-      stylelint-config-recommended-vue: 1.6.1(postcss-html@1.8.1)(stylelint@17.0.0(typescript@5.9.3))
-      stylelint-config-standard: 40.0.0(stylelint@17.0.0(typescript@5.9.3))
+      stylelint: 17.1.1(typescript@5.9.3)
+      stylelint-config-html: 1.1.0(postcss-html@1.8.1)(stylelint@17.1.1(typescript@5.9.3))
+      stylelint-config-recommended-vue: 1.6.1(postcss-html@1.8.1)(stylelint@17.1.1(typescript@5.9.3))
+      stylelint-config-standard: 40.0.0(stylelint@17.1.1(typescript@5.9.3))
 
-  stylelint-config-standard@40.0.0(stylelint@17.0.0(typescript@5.9.3)):
+  stylelint-config-standard@40.0.0(stylelint@17.1.1(typescript@5.9.3)):
     dependencies:
-      stylelint: 17.0.0(typescript@5.9.3)
-      stylelint-config-recommended: 18.0.0(stylelint@17.0.0(typescript@5.9.3))
+      stylelint: 17.1.1(typescript@5.9.3)
+      stylelint-config-recommended: 18.0.0(stylelint@17.1.1(typescript@5.9.3))
 
-  stylelint-order@7.0.1(stylelint@17.0.0(typescript@5.9.3)):
+  stylelint-order@7.0.1(stylelint@17.1.1(typescript@5.9.3)):
     dependencies:
       postcss: 8.5.6
       postcss-sorting: 9.1.0(postcss@8.5.6)
-      stylelint: 17.0.0(typescript@5.9.3)
+      stylelint: 17.1.1(typescript@5.9.3)
 
-  stylelint@17.0.0(typescript@5.9.3):
+  stylelint@17.1.1(typescript@5.9.3):
     dependencies:
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-syntax-patches-for-csstree': 1.0.26
